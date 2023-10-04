@@ -13,7 +13,10 @@ async function ProductPage({ params: { id } }: Props) {
     const product: Product = await res.json();
 
     return (
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4 mt-48 pb-10">
+      <div
+        className="max-w-5xl mx-auto flex flex-row md:flex-row items-center gap-8 px-4 
+      mt-48 pb-10"
+      >
         <ProductImage product={product} />
 
         <div className="divide-y">
@@ -25,6 +28,20 @@ async function ProductPage({ params: { id } }: Props) {
 
             <div className="pt-8">
               <p className="text-xs md:text-sm">{product.description}</p>
+            </div>
+            <div className="space-y-3 text-sm">
+              <button
+                className="button bg-blue-600 text-white border-transparent 
+                   hover:border-blue-600 hover:bg-transparent hover:text-black"
+              >
+                Add to Cart
+              </button>
+              <button
+                className="button bg-transparent border-blue-600 hover:bg-blue-600 hover:text-white
+                       mx-2 hover:border-transparent"
+              >
+                View full details
+              </button>
             </div>
           </div>
         </div>

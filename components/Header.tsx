@@ -78,17 +78,17 @@ function Header() {
             Account
             <Icon icon="system-uicons:chevron-down" className="h-6 w-6" />
           </label>
-          <label className="label hidden md:inline-flex">
+          <label className="label hidden md:inline-flex lg:inline-flex xl:inline-flex">
             <span className="ml-1 mr-2">
               <Icon
                 icon="material-symbols:help-outline"
-                className="h-6 w-6 hidden md:inline"
+                className="h-6 w-6 hidden md:inline lg:inline-flex xl:inline-flex"
               />
             </span>
             Help
             <Icon
               icon="system-uicons:chevron-down"
-              className="h-6 w-6 hidden md:inline"
+              className="h-6 w-6 hidden md:inline lg:inline-flex xl:inline-flex"
             />
           </label>
           <a className="label">

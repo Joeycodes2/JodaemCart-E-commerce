@@ -31,7 +31,7 @@ function Modal() {
       open={isOpen}
       onClose={() => {
         setIsOpen(false);
-        router.back();
+        // router.back();
       }}
       className="relative z-50"
     >
@@ -50,22 +50,22 @@ function Modal() {
               animate-spin"
               />
             ) : (
-              <div className="flex gap-x-8 h-96">
+              <div className="flex gap-x-2 md:gap-x-8 lg:gap-x-8 h-96">
                 {product?.image && (
-                  <div className="relative w-72 h-full hidden md:inline">
+                  <div className="relative w-72 h-full sm:hidden md:inline">
                     <ProductImage product={product} fill />
                   </div>
                 )}
 
                 <div className="flex-1 flex flex-col">
                   <div className="flex-1">
-                    <h4 className="font-semibold">{product?.title}</h4>
+                    <h4 className="font-semibold pl-4">{product?.title}</h4>
                     <p className="font-medium text-sm">{product?.price}</p>
 
-                    <div className="flex items-center text-sm my-4">
+                    <div className="flex items-center text-sm my-1 md:my-4">
                       <p>{product?.rating.rate}</p>
                       {product?.rating.rate && (
-                        <div className="flex items-center ml-2 mr-6">
+                        <div className="flex items-center ml-2 mr-1 sm:mr-2 md:mr-6">
                           {/* display five 5 stars but display the rate ones as StarIconOutline */}
                           {Array.from(
                             { length: Math.floor(product.rating.rate) },
@@ -100,15 +100,15 @@ function Modal() {
                   <div className="space-y-3 text-sm">
                     <button
                       className="button w-full bg-blue-600 text-white border-transparent 
-                  hover:border-blue-600 hover:bg-transparent hover:text-black"
+                   hover:border-blue-600 hover:bg-transparent hover:text-black"
                     >
                       Add to Cart
                     </button>
                     <button
                       onClick={() => window.location.reload()}
                       className="button
-                  w-full bg-transparent border-blue-600 hover:bg-blue-600 hover:text-white
-                  hover:border-transparent"
+                       w-full bg-transparent border-blue-600 hover:bg-blue-600 hover:text-white
+                       hover:border-transparent"
                     >
                       View full details
                     </button>
